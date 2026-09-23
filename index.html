@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Mobile Shop Manager</title>
+<meta name="description" content="Stock, sales, purchase aur shop accounts ek hi jagah — Mobile Shop Manager.">
+<meta name="theme-color" content="#0f6b3f">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Shop Manager">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="boot-splash"><div class="boot-logo">🏪</div><div class="boot-name">Mobile Shop Manager</div><div class="boot-spin"></div></div>
+
+  <div id="offline-banner" hidden></div>
+
+  <header id="topbar">
+    <button id="back-btn" class="icon-btn round" hidden aria-label="Peeche jao"></button>
+    <h1 id="page-title">Home</h1>
+    <div class="top-right">
+      <span id="sync-dot" title="Data save status" aria-hidden="true"></span>
+      <button class="icon-btn round" data-act="go" data-h="#/search" aria-label="Search" id="search-btn"></button>
+    </div>
+  </header>
+
+  <main id="app" role="main"></main>
+
+  <button id="fab" aria-label="Quick add" aria-expanded="false" aria-haspopup="true">
+    <svg class="plus-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+  </button>
+  <div id="fab-menu" hidden>
+    <button data-v="expense"><span class="fmi red"></span><span>Expense</span></button>
+    <button data-v="purchase"><span class="fmi amber"></span><span>Purchase</span></button>
+    <button data-v="stock"><span class="fmi purple"></span><span>Stock</span></button>
+    <button data-v="sale"><span class="fmi blue"></span><span>Sale</span></button>
+  </div>
+
+  <nav id="bottom-nav" aria-label="Main navigation"></nav>
+
+  <div id="toasts" aria-live="polite"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
